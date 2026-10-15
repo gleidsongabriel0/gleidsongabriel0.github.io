@@ -3,13 +3,131 @@
 
 :root {
     --bg-color: #FAF8F5;
+    --text-main: #1C1D1F;
+    --text-body: #4A4D52;
+}
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     background-color: var(--bg-color);
+    color: var(--text-body);
     font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+.header {
+    width: 100%;
+    max-width: 900px;
+    padding: 32px 24px 0;
+    display: flex;
+    justify-content: flex-end;
+}
 
+.nav-menu {
+  display: flex;
+  gap: 20px;
+}
 
+.nav-link {
+    text-decoration: none;
+    color: var(--text-body);
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background-color: #FFFFFF;
+    border: 1px solid #EBE7DF;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+    transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+  color: var(--text-main);
+  border-color: #D6D0C4;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  padding: 0 24px;
+}
+
+.hero-section {
+    width: 100%;
+    padding: 180px 24px 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 600px;
+}
+
+.hero-text span {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.hero-text h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 4rem;
+    font-weight: 900;
+    color: var(--text-main);
+    letter-spacing: -1px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 1.15rem;
+  color: var(--text-body);
+  margin-bottom: 6px;
+}
+
+.hero-text .role {
+    font-weight: 500;
+    color: #810fbc;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.hero-text .role a {
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 1.5px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+.hero-text > span:first-child {
+  margin-bottom: 15px;
+}
+
+.hero-text > span:last-child {
+  margin-top: 10px;
+}
+
+.hero-image {
+  flex-shrink: 0;
+}
+
+.hero-image img {
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid #FFFFFF;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
