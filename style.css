@@ -74,6 +74,39 @@ body {
   margin: 0 auto;
 }
 
+/* Correção para Celular e Telas Menores */
+@media (max-width: 820px) {
+  .hero-section {
+    flex-direction: column-reverse; /* Foto no topo, texto embaixo */
+    gap: 32px;
+    padding: 40px 16px;
+    text-align: center;
+    min-height: auto;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .hero-text h1 {
+    font-size: 2.8rem; /* Diminui o nome para caber na tela do celular */
+  }
+
+  .hero-text .role {
+    white-space: normal; /* Permite quebrar linha naturalmente no celular */
+  }
+
+  .hero-image img {
+    width: 240px; /* Reduz a foto para não estourar a tela pequena */
+    height: 240px;
+  }
+
+  .header {
+    justify-content: center; /* Centraliza o menu no topo do celular */
+    padding: 20px 16px 0;
+  }
+}
+
 .hero-text {
     flex: 1;
     max-width: 620px;
@@ -163,6 +196,21 @@ body {
   .stacks-grid {
     grid-template-columns: repeat(2, 1fr); /* No celular/tablet vira 2 colunas x 4 linhas */
     gap: 16px;
+  }
+
+  .stacks-card {
+    padding: 16px 12px;                    /* Menos preenchimento interno */
+    border-radius: 14px;
+    gap: 10px;                             /* Aproxima o ícone do texto */
+  }
+
+  .stacks-card img {
+    width: 32px;                           /* Reduz de 90px para 48px no mobile */
+    height: 32px;
+  }
+
+  .stacks-card span {
+    font-size: 0.9rem;                     /* Fonte um pouco menor e mais proporcional */
   }
 }
 
